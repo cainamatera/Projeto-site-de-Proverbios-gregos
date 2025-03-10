@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --cor1: #003055;
+  --cor2: #D9E0E9;
+  --cor3: #5D6C72;
+  --cor4: #2E3A47;
+}
+body {
+  background: var(--cor2);
+}
+header {
+  background: var(--cor1);
+  height: 600px;
+  box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
+}
+header h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: var(--cor2);
+}
+
+header img {
+  width: 400px;
+  height: 400px;
+}
+
+.github {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 32px;
+  height: 32px;
+}
+.center {
+  padding-top: 50px;
+  text-align: center;
+}
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.container img {
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.596);
+  border-bottom: 5px solid var(--cor1);
+  border-right: 5px solid var(--cor1);
+  border-radius: 0 5px 5px 5px;
+  transition: transform .5s ease-in-out;
+}
+
+.container:hover img {
+  transform: scale(1.15);
+}
+
+.container h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--cor2);
+  padding: 2px;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.349);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.349);
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--cor2);
+  padding: 2px;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.349);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.349);
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.container:hover h2 {
+  opacity: 0;
+}
+
+.container:hover p {
+  opacity: 1;
+}
