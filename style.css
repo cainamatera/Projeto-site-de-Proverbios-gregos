@@ -4,19 +4,18 @@
 }
 
 :root {
-  --cor1: #003055;
+  --cor1: #ddb892;
   --cor2: #D9E0E9;
-  --cor3: #5D6C72;
+  --cor3: #ff8a6749;
   --cor4: #2E3A47;
 }
 
 body {
   background: url(img2.png) no-repeat center / cover;
-  backdrop-filter: blur(5px) brightness(.5) saturate(2) contrast(100%);
+  backdrop-filter: blur(5px) brightness(.3) saturate(2) contrast(100%);
 }
 
 header {
-  background: var(--cor1);
   height: 600px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
 }
@@ -55,8 +54,6 @@ header img {
 
 .container img {
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.596);
-  border-bottom: 5px solid var(--cor1);
-  border-right: 5px solid var(--cor1);
   border-radius: 0 5px 5px 5px;
   transition: transform .5s ease-in-out;
 }
@@ -168,6 +165,7 @@ main {
 
 .cent:hover .anim  {
   transform:  translate(-250px) rotateX(-30deg);
+  width: 250px;
 }
 .cent {
   display: inline-block;
@@ -178,7 +176,8 @@ main {
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
   padding: 40px;
   margin: 10px;
-  margin-right: 200px;
+  margin-right: 110px;
+
   text-align: center;
  
   color: var(--cor2);
@@ -233,6 +232,49 @@ main {
   animation: bolha1 6s infinite alternate;
   background: var(--cor2);
 }
+.mainproverbios {
+  position: absolute;
+  text-align: center;
+  margin-left: 200px;
+}
+.proverbios {
+  display: inline-block;
+  position: relative;
+  perspective: 800px;
+  width: 400px;
+  backdrop-filter: blur(10px) brightness(.5);
+  height: 160px;
+  box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
+  padding: 30px;
+  margin-top: 20px;
+  margin-left: 100px;
+  text-align: justify;
+  color: var(--cor2);
+}
+main h2 {
+  text-align: center;
+  color:  var(--cor2);
+}
+.proverbios h3 {
+  text-align: left;
+
+}
+.proverbios ol, ul, li{
+  list-style-type: none;
+  
+}
+
+.pcent {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  opacity: 1;
+  pointer-events: none;
+  top: 50%;
+  left: 35%;
+  transition: .5s ease-in-out ;
+}
+
 
 @keyframes bolha1 {
   0%, 100% { 
