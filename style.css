@@ -84,6 +84,7 @@ header img {
   opacity: 0;
   transition: .5s ease-in-out;
   font-size: 30px;
+  cursor: default;
 }
 
 #t2 {
@@ -98,6 +99,7 @@ header img {
   animation: random 2s infinite;
   background: var(--cor3);
   pointer-events: none;
+  cursor: pointer;
 }
 
 .container p {
@@ -117,6 +119,8 @@ header img {
   font-size: 20px;
   transform: translate(200px) rotateY(-20deg) rotateX(-30deg);
   letter-spacing: -1px;
+  cursor: default;
+  pointer-events: none;
 }
 
 #titulop1 {
