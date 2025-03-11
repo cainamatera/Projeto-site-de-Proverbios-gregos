@@ -114,7 +114,6 @@ header img {
   box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.349);
   opacity: 0;
   transition: opacity .5s ease-in-out;
-  pointer-events: none;
   font-size: 20px;
   transform: translate(200px) rotateY(-20deg) rotateX(-30deg);
   letter-spacing: -1px;
