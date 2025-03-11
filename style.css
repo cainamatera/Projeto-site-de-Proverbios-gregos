@@ -97,6 +97,7 @@ header img {
   transform: rotateX(45deg);
   animation: random 2s infinite;
   background: var(--cor3);
+  pointer-events: none;
 }
 
 .container p {
