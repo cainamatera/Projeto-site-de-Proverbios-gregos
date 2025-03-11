@@ -11,7 +11,7 @@
 }
 
 body {
-  background: var(--cor2);
+  background: url(img2.png) no-repeat center / cover;
 }
 
 header {
@@ -97,6 +97,8 @@ header img {
   left: -80%;
   font-size: 15px;
   transform: rotateX(45deg);
+  animation: random 2s infinite;
+  background: var(--cor3);
 }
 
 .container p {
@@ -154,6 +156,7 @@ main {
   width: 1000px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
   padding: 5px;
+  background: url(img2.png) no-repeat center / cover;
 }
 
 .anim {
@@ -161,29 +164,184 @@ main {
   height: 200px;
   border: 1px solid var(--cor4);
   border-radius: 50%;
-  transition: transform 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .anim:hover  {
-  transform:  translate(-100px) rotateX(-30deg);
+  transform:  translate(-200px) rotateX(-30deg);
+  border-radius: 29% 71% 61% 39% / 44% 37% 63% 56% ;
 }
 .cent {
   display: inline-block;
   position: relative;
   perspective: 800px;
   overflow: hidden;
-  width: 400px;
+  width: 300px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
   padding: 40px;
   margin: 10px;
+  margin-right: 200px;
   text-align: center;
+  backdrop-filter: blur(10px);
+  color: var(--cor2);
 }
 .text {
   position: absolute;
   transform: translate(-50%, -50%);
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
 }
 .text {
   top: 50%;
   left: 55%;
+}
+
+.img1 {
+  border-radius: 73% 27% 82% 18% / 31% 27% 73% 69%;
+  animation: bolha1 6s infinite alternate;
+}
+
+.img2 {
+  border-radius: 63% 37% 72% 28% / 41% 17% 83% 59%;
+  animation: bolha1 6s infinite alternate;
+}
+.img3 {
+  border-radius: 53% 47% 62% 38% / 51% 7% 93% 49%;
+  animation: bolha1 6s infinite alternate;
+}
+.img4 {
+  border-radius: 83% 57% 15% 88% / 11% 68% 43% 89%;
+  animation: bolha1 6s infinite alternate;
+}
+.img5 {
+  border-radius: 33% 87% 25% 62% / 83% 34% 13% 15%;
+  animation: bolha1 6s infinite alternate;
+  background: bisque;
+}
+.img6 {
+  border-radius: 45% 17% 91% 46% / 25% 40% 24% 68%;
+  animation: bolha1 6s infinite alternate;
+  background: beige;
+}
+
+@keyframes bolha1 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 72% 42% 63% 31% / 48% 62% 53% 45%;
+  }
+  50% { 
+    border-radius: 59% 33% 78% 48% / 51% 44% 60% 39%;
+  }
+  75% { 
+    border-radius: 63% 37% 74% 29% / 49% 61% 55% 46%;
+  }
+}
+
+@keyframes bolha2 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 63% 35% 79% 42% / 53% 38% 64% 49%;
+  }
+  50% { 
+    border-radius: 58% 40% 66% 34% / 56% 51% 60% 38%;
+  }
+  75% { 
+    border-radius: 70% 32% 75% 41% / 44% 62% 58% 49%;
+  }
+}
+
+@keyframes bolha3 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 65% 45% 70% 28% / 54% 37% 66% 43%;
+  }
+  50% { 
+    border-radius: 57% 48% 73% 39% / 50% 42% 61% 51%;
+  }
+  75% { 
+    border-radius: 67% 38% 80% 32% / 47% 53% 62% 44%;
+  }
+}
+
+@keyframes bolha4 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 62% 40% 73% 37% / 56% 39% 65% 47%;
+  }
+  50% { 
+    border-radius: 55% 49% 74% 41% / 52% 44% 61% 50%;
+  }
+  75% { 
+    border-radius: 69% 36% 75% 33% / 49% 59% 58% 46%;
+  }
+}
+
+@keyframes bolha5 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 60% 42% 78% 35% / 55% 41% 68% 47%;
+  }
+  50% { 
+    border-radius: 62% 45% 72% 38% / 57% 43% 69% 49%;
+  }
+  75% { 
+    border-radius: 69% 39% 77% 41% / 53% 48% 62% 46%;
+  }
+}
+
+@keyframes bolha6 {
+  0%, 100% { 
+    border-radius: 50%; 
+  }
+  25% { 
+    border-radius: 68% 33% 72% 30% / 54% 43% 61% 50%;
+  }
+  50% { 
+    border-radius: 65% 44% 74% 37% / 51% 45% 63% 48%;
+  }
+  75% { 
+    border-radius: 71% 41% 77% 36% / 50% 47% 64% 49%;
+  }
+}
+@keyframes random {
+  0%, 100% { 
+    border-radius: 50%;
+  }
+  10% { 
+    border-radius: 95% 20% 75% 40% / 55% 10% 60% 85%;
+  }
+  20% { 
+    border-radius: 17% 50% 95% 60% / 34% 80% 10% 60%;
+  }
+  30% { 
+    border-radius: 22% 73% 38% 58% / 87% 43% 64% 12%;
+  }
+  40% { 
+    border-radius: 57% 82% 30% 18% / 71% 12% 50% 65%;
+  }
+  50% { 
+    border-radius: 45% 90% 22% 56% / 35% 52% 40% 60%;
+  }
+  60% { 
+    border-radius: 64% 27% 51% 12% / 71% 36% 50% 73%;
+  }
+  70% { 
+    border-radius: 56% 48% 61% 43% / 74% 39% 50% 61%;
+  }
+  80% { 
+    border-radius: 39% 54% 20% 65% / 50% 80% 67% 45%;
+  }
+  90% { 
+    border-radius: 83% 52% 28% 48% / 33% 70% 85% 20%;
+  }
 }
