@@ -1,6 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'Greece1';
+  src: url('fonts/Greek-Freak.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'greece2';
+  src: url('fonts/DalekPinpointBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'texto';
+  src: url('fonts/UncialAntiqua-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -10,14 +20,34 @@
   --cor4: #2E3A47;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
-  background: url(img2.png) no-repeat center / cover;
+  background: url(img/img2.png) no-repeat center / cover;
   backdrop-filter: blur(5px) brightness(.3) saturate(2) contrast(100%);
 }
 
 header {
   height: 600px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
+}
+
+h1 {
+  font-family: 'greece2';
+}
+
+h2,
+h3 {
+  font-family: 'greece2';
+}
+
+p {
+  font-family: 'texto';
+  font-size: 11px;
 }
 
 header h1 {
@@ -38,6 +68,8 @@ header img {
   right: 1px;
   width: 32px;
   height: 32px;
+  background: rgba(133, 133, 133, 0.651);
+  border-radius: 50%;
 }
 
 .center {
@@ -54,8 +86,8 @@ header img {
 
 .container img {
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.596);
-  border-radius: 0 5px 5px 5px;
-  transition: transform .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
 .container:hover img {
@@ -96,10 +128,12 @@ header img {
   left: -80%;
   font-size: 15px;
   transform: rotateX(45deg);
-  animation: random 2s infinite;
-  background: var(--cor3);
+  animation: random 5s infinite ease-in-out;
+  background: rgba(0, 0, 0, 0.158);
   pointer-events: none;
   cursor: pointer;
+  font-size: 16px;
+  text-indent: 50px;
 }
 
 .container p {
@@ -112,12 +146,13 @@ header img {
   width: 300px;
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.349);
   backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(255, 255, 255, 0.151);
   border-radius: 10px;
-  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.349);
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.568);
   opacity: 0;
   transition: opacity .5s ease-in-out;
   font-size: 20px;
-  transform: translate(200px) rotateY(-20deg) rotateX(-30deg);
+  transform: translate(200px) rotateY(-35deg) rotateX(25deg);
   letter-spacing: -1px;
   cursor: default;
   pointer-events: none;
@@ -126,19 +161,23 @@ header img {
 #titulop1 {
   text-align: center;
   top: -10%;
+  font-family: 'greece2';
 }
 
 #p1 {
   top: 0%;
+  font-size: 16px;
 }
 
 #titulop2 {
   text-align: center;
-  top: 45%;
+  top: 43%;
+  font-family: 'greece2';
 }
 
 #p2 {
   top: 60%;
+  font-size: 16px;
 }
 
 .container:hover h2 {
@@ -158,7 +197,7 @@ main {
   width: 1000px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
   padding: 5px;
-  background: url(img2.png) no-repeat center / cover;
+  background: url(img/img2.png) no-repeat center / cover;
 }
 
 .anim {
@@ -167,10 +206,15 @@ main {
   transition: 1s ease-in-out;
 }
 
-.cent:hover .anim  {
-  transform:  translate(-250px) rotateX(-30deg);
-  width: 250px;
+.cent:hover .anim {
+  transform: translate(-250px) scale(1.2);
 }
+
+.pcent li {
+  font-family: 'texto';
+  font-size: 13px;
+}
+
 .cent {
   display: inline-block;
   position: relative;
@@ -183,15 +227,17 @@ main {
   margin-right: 110px;
 
   text-align: center;
- 
+
   color: var(--cor2);
   transform-origin: center;
   transition: 1s ease-in-out;
 }
-
 .cent:hover {
   backdrop-filter: blur(10px) brightness(.5);
   width: 600px;
+}
+.cent h3 {
+  transition: 1s ease-in-out;
 }
 .text {
   position: absolute;
@@ -201,7 +247,7 @@ main {
   pointer-events: none;
   top: 50%;
   left: 55%;
-  transition: .5s ease-in-out ;
+  transition: .5s ease-in-out;
 }
 
 .cent:hover .text {
@@ -211,61 +257,72 @@ main {
 
 .img1 {
   border-radius: 73% 27% 82% 18% / 31% 27% 73% 69%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
 }
 
 .img2 {
   border-radius: 63% 37% 72% 28% / 41% 17% 83% 59%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
 }
+
 .img3 {
   border-radius: 53% 47% 62% 38% / 51% 7% 93% 49%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
 }
+
 .img4 {
   border-radius: 83% 57% 15% 88% / 11% 68% 43% 89%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
 }
+
 .img5 {
   border-radius: 33% 87% 25% 62% / 83% 34% 13% 15%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
   background: var(--cor2);
 }
+
 .img6 {
   border-radius: 45% 17% 91% 46% / 25% 40% 24% 68%;
-  animation: bolha1 6s infinite alternate;
+  animation: bolha1 10s infinite ease-in-out;
   background: var(--cor2);
 }
+
 .mainproverbios {
   position: absolute;
   text-align: center;
   margin-left: 200px;
 }
+
 .proverbios {
-  display: inline-block;
+  display: block;
   position: relative;
   perspective: 800px;
-  width: 400px;
+  width: 500px;
   backdrop-filter: blur(10px) brightness(.5);
   height: 160px;
   box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.26);
   padding: 30px;
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 200px;
   text-align: justify;
   color: var(--cor2);
 }
+
 main h2 {
   text-align: center;
-  color:  var(--cor2);
+  color: var(--cor2);
 }
+
 .proverbios h3 {
   text-align: left;
 
 }
-.proverbios ol, ul, li{
+
+.proverbios ol,
+ul,
+li {
   list-style-type: none;
-  
+
 }
 
 .pcent {
@@ -276,128 +333,427 @@ main h2 {
   pointer-events: none;
   top: 50%;
   left: 35%;
-  transition: .5s ease-in-out ;
+  transition: .5s ease-in-out;
 }
 
-
 @keyframes bolha1 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 72% 42% 63% 31% / 48% 62% 53% 45%;
+
+  10% {
+    border-radius: 53% 50% 52% 50% / 53% 48% 50% 53%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 59% 33% 78% 48% / 51% 44% 60% 39%;
+
+  20% {
+    border-radius: 51% 55% 53% 52% / 51% 50% 53% 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 63% 37% 74% 29% / 49% 61% 55% 46%;
+
+  30% {
+    border-radius: 54% 52% 50% 55% / 52% 54% 50% 53%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  40% {
+    border-radius: 55% 50% 53% 50% / 55% 50% 53% 50%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
+  }
+
+  50% {
+    border-radius: 53% 55% 51% 52% / 54% 53% 50% 53%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.85);
+  }
+
+  60% {
+    border-radius: 52% 50% 53% 54% / 51% 50% 52% 51%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+  }
+
+  70% {
+    border-radius: 51% 52% 50% 55% / 51% 50% 52% 53%;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.9);
+  }
+
+  80% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+  }
+
+  90% {
+    border-radius: 52% 53% 50% 54% / 51% 50% 52% 50%;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.85);
   }
 }
 
 @keyframes bolha2 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 63% 35% 79% 42% / 53% 38% 64% 49%;
+
+  15% {
+    border-radius: 52% 51% 53% 50% / 51% 53% 50% 54%;
+    box-shadow: 0 0 22px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 58% 40% 66% 34% / 56% 51% 60% 38%;
+
+  30% {
+    border-radius: 55% 54% 52% 50% / 54% 50% 52% 53%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 70% 32% 75% 41% / 44% 62% 58% 49%;
+
+  45% {
+    border-radius: 50% 55% 53% 51% / 50% 52% 51% 53%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  60% {
+    border-radius: 51% 50% 55% 54% / 52% 53% 50% 51%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
+  }
+
+  75% {
+    border-radius: 53% 52% 50% 55% / 50% 54% 51% 50%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.85);
+  }
+
+  90% {
+    border-radius: 54% 50% 52% 53% / 53% 50% 50% 52%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
   }
 }
 
 @keyframes bolha3 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 65% 45% 70% 28% / 54% 37% 66% 43%;
+
+  25% {
+    border-radius: 55% 50% 52% 51% / 50% 50% 51% 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 57% 48% 73% 39% / 50% 42% 61% 51%;
+
+  50% {
+    border-radius: 51% 55% 53% 52% / 50% 52% 50% 54%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 67% 38% 80% 32% / 47% 53% 62% 44%;
+
+  75% {
+    border-radius: 50% 53% 55% 51% / 50% 50% 52% 51%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  90% {
+    border-radius: 54% 52% 50% 55% / 51% 50% 53% 52%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
   }
 }
 
 @keyframes bolha4 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 62% 40% 73% 37% / 56% 39% 65% 47%;
+
+  10% {
+    border-radius: 51% 53% 50% 54% / 51% 50% 52% 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 55% 49% 74% 41% / 52% 44% 61% 50%;
+
+  20% {
+    border-radius: 55% 50% 53% 51% / 50% 52% 51% 53%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 69% 36% 75% 33% / 49% 59% 58% 46%;
+
+  30% {
+    border-radius: 50% 53% 55% 50% / 50% 51% 52% 50%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  40% {
+    border-radius: 52% 54% 50% 53% / 51% 52% 50% 51%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
+  }
+
+  50% {
+    border-radius: 53% 50% 52% 50% / 50% 51% 51% 52%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.85);
+  }
+
+  60% {
+    border-radius: 50% 51% 54% 52% / 52% 50% 53% 51%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
   }
 }
 
 @keyframes bolha5 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 60% 42% 78% 35% / 55% 41% 68% 47%;
+
+  15% {
+    border-radius: 54% 50% 52% 53% / 51% 52% 50% 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 62% 45% 72% 38% / 57% 43% 69% 49%;
+
+  30% {
+    border-radius: 50% 52% 54% 50% / 50% 53% 51% 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 69% 39% 77% 41% / 53% 48% 62% 46%;
+
+  45% {
+    border-radius: 55% 50% 51% 52% / 52% 50% 53% 54%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  60% {
+    border-radius: 50% 53% 52% 54% / 51% 50% 50% 51%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
+  }
+
+  75% {
+    border-radius: 52% 50% 54% 53% / 51% 52% 50% 52%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.85);
   }
 }
 
 @keyframes bolha6 {
-  0%, 100% { 
-    border-radius: 50%; 
+
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
-  25% { 
-    border-radius: 68% 33% 72% 30% / 54% 43% 61% 50%;
+
+  20% {
+    border-radius: 53% 50% 52% 51% / 50% 53% 52% 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
   }
-  50% { 
-    border-radius: 65% 44% 74% 37% / 51% 45% 63% 48%;
+
+  40% {
+    border-radius: 50% 52% 55% 50% / 50% 51% 50% 52%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   }
-  75% { 
-    border-radius: 71% 41% 77% 36% / 50% 47% 64% 49%;
+
+  60% {
+    border-radius: 51% 53% 50% 54% / 50% 50% 53% 52%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  80% {
+    border-radius: 52% 50% 51% 53% / 50% 51% 50% 54%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
   }
 }
+
 @keyframes random {
-  0%, 100% { 
-    border-radius: 50%;
+  0% {
+    border-radius: 30% 50% 40% 60% / 20% 40% 30% 50%;
   }
-  10% { 
-    border-radius: 95% 20% 75% 40% / 55% 10% 60% 85%;
+
+  5% {
+    border-radius: 35% 55% 45% 65% / 25% 45% 35% 55%;
   }
-  20% { 
-    border-radius: 17% 50% 95% 60% / 34% 80% 10% 60%;
+
+  10% {
+    border-radius: 40% 60% 50% 70% / 30% 50% 40% 60%;
   }
-  30% { 
-    border-radius: 22% 73% 38% 58% / 87% 43% 64% 12%;
+
+  15% {
+    border-radius: 45% 65% 55% 75% / 35% 55% 45% 65%;
   }
-  40% { 
-    border-radius: 57% 82% 30% 18% / 71% 12% 50% 65%;
+
+  20% {
+    border-radius: 50% 70% 60% 80% / 40% 60% 50% 70%;
   }
-  50% { 
-    border-radius: 45% 90% 22% 56% / 35% 52% 40% 60%;
+
+  25% {
+    border-radius: 55% 75% 65% 85% / 45% 65% 55% 75%;
   }
-  60% { 
-    border-radius: 64% 27% 51% 12% / 71% 36% 50% 73%;
+
+  30% {
+    border-radius: 60% 80% 70% 90% / 50% 70% 60% 80%;
   }
-  70% { 
-    border-radius: 56% 48% 61% 43% / 74% 39% 50% 61%;
+
+  35% {
+    border-radius: 55% 75% 65% 85% / 45% 65% 55% 75%;
   }
-  80% { 
-    border-radius: 39% 54% 20% 65% / 50% 80% 67% 45%;
+
+  40% {
+    border-radius: 50% 70% 60% 80% / 40% 60% 50% 70%;
   }
-  90% { 
-    border-radius: 83% 52% 28% 48% / 33% 70% 85% 20%;
+
+  45% {
+    border-radius: 45% 65% 55% 75% / 35% 55% 45% 65%;
+  }
+
+  50% {
+    border-radius: 40% 60% 50% 70% / 30% 50% 40% 60%;
+  }
+
+  55% {
+    border-radius: 35% 55% 45% 65% / 25% 45% 35% 55%;
+  }
+
+  60% {
+    border-radius: 30% 50% 40% 60% / 20% 40% 30% 50%;
+  }
+
+  65% {
+    border-radius: 25% 45% 35% 55% / 15% 35% 25% 45%;
+  }
+
+  70% {
+    border-radius: 20% 40% 30% 50% / 10% 30% 20% 40%;
+  }
+
+  75% {
+    border-radius: 25% 45% 35% 55% / 15% 35% 25% 45%;
+  }
+
+  80% {
+    border-radius: 30% 50% 40% 60% / 20% 40% 30% 50%;
+  }
+
+  85% {
+    border-radius: 35% 55% 45% 65% / 25% 45% 35% 55%;
+  }
+
+  90% {
+    border-radius: 40% 60% 50% 70% / 30% 50% 40% 60%;
+  }
+
+  95% {
+    border-radius: 45% 65% 55% 75% / 35% 55% 45% 65%;
+  }
+
+  100% {
+    border-radius: 30% 50% 40% 60% / 20% 40% 30% 50%;
+  }
+}
+
+
+footer {
+  bottom: 0;
+  color: var(--cor2);
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 1200px;
+    width: auto;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  header img {
+    width: 400px;
+    height: 400px;
+
+  }
+
+  .container:hover img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .github {
+    position: block;
+  }
+
+  .container h2 {
+    font-size: 30px;
+  }
+
+  .container:hover h2 {
+    font-size: 20px;
+  }
+
+  #nome {
+    top: 30%;
+    left: -80%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    transform: rotate(90deg);
+  }
+
+  .container p {
+    left: -75%;
+    letter-spacing: normal;
+  }
+
+  #titulop1 {
+    top: 130%;
+    font-size: 16px;
+  }
+
+  #p1 {
+    top: 160%;
+    font-size: 14px;
+  }
+
+  #titulop2 {
+    top: 240%;
+    font-size: 16px;
+  }
+
+  #p2 {
+    left: -80%;
+    top: 280%;
+  }
+
+  main {
+    margin: 0;
+    width: auto;
+  }
+
+  .anim {
+    width: 80px;
+    height: 80px;
+  }
+  .cent {
+    width: 80px;
+  }
+  .cent:hover .anim {
+    transform: translate(-200px) scale(1.2);
+  }
+  .cent:hover h3 {
+    transform: translate(0, -40px);
+    text-align: start;
+  }
+  .cent h3 {
+    font-size: 10px;
+    transition: 1s ease-in-out;
+  }
+  .cent p {
+    transform: translate(-30px, -80px);
+    font-size: 10px;
+  }
+  .cent:hover {
+    width: 300px;
+  }
+
+  .mainproverbios {
+    margin-left: 0;
+  }
+  .proverbios {
+    display: inline-block;
+    width: 200px;
   }
 }
