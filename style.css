@@ -12,7 +12,10 @@
   font-family: 'texto';
   src: url('fonts/UncialAntiqua-Regular.ttf') format('truetype');
 }
-
+@font-face {
+  font-family: 'medieval';
+  src: url(fonts/MedievalSharp-Regular.ttf);
+}
 :root {
   --cor1: #ddb892;
   --cor2: #D9E0E9;
@@ -688,6 +691,7 @@ footer {
 
 .q p {
   font-size: 20px;
+  font-family: 'medieval';
 }
 
 .q h3 {
