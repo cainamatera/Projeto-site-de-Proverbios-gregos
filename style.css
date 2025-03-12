@@ -718,6 +718,11 @@ footer {
   animation: shadow3 2s infinite ease-in-out;
 }
 
+.q .abuh {
+  font-size: 10px;
+  text-align: end;
+}
+
 @keyframes shadow2 {
   0% {
     box-shadow: 0px 7px 5px 1px rgba(0, 0, 0, 0.4);
